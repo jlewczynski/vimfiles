@@ -31,3 +31,18 @@
 [submodule "bundle/pydiction"]
 	path = bundle/pydiction
 	url = http://github.com/rkulla/pydiction.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/sirver/ultisnips
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = http://github.com/tpope/vim-unimpaired
+[submodule "bundle/eunuch"]
+	path = bundle/eunuch
+	url = http://github.com/tpope/vim-eunuch

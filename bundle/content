@@ -1,0 +1,22 @@
+bufexplorer
+    easy buffer exploration
+ctrlp
+    fuzzy file search
+easymotion
+    quick motion jumps
+eunuch
+    useful Unix commands from inside Vim
+fugitive
+    git integration
+gundo
+    undo tree
+nerdtree
+    file browser
+pathogen
+    plugin management
+tagbar
+    file tag explorer
+tlib
+    dependency for sth.
+unimpaired
+    shortcuts for quick symmetrical actions

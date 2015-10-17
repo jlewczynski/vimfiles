@@ -12,14 +12,14 @@ set nocompatible
 
 if has("autocmd")
     " Turn on indent
-	filetype plugin indent on
+    filetype plugin indent on
     " Add syntax for VB files
-	au BufNewFile,BufRead *.cls,*.frm set filetype=vb
+    au BufNewFile,BufRead *.cls,*.frm set filetype=vb
 endif
 
 " Turn on syntax highlight
 if &t_Co > 2 || has("gui_running")
-	syntax on
+    syntax on
 endif
 
 " Allow to leave an unsaved buffer
@@ -73,7 +73,11 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set incsearch
 
 " Set colorscheme to desert
-colorscheme desert
+if &t_Co == 256
+    colorscheme desert256
+elseif &t_Co > 2
+    colorscheme desert
+endif
 
 " Set leader
 let mapleader=","
