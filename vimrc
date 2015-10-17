@@ -3,7 +3,9 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Force messages to be in English
-language message en
+if has("win32") || has("win16")
+    language message en
+endif
 
 " Forget being compatible with good ol' vi
 set nocompatible
@@ -64,8 +66,14 @@ set fileencodings=utf-8,latin1
 " Backspace through end of line start of line and indentation
 set backspace=indent,eol,start
 
+" Highlight tabs and trailing char
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
 " Incremental search
 set incsearch
+
+" Set colorscheme to desert
+colorscheme desert
 
 " Set leader
 let mapleader=","
