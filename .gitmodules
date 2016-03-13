@@ -46,3 +46,6 @@
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = http://github.com/tpope/vim-eunuch
+[submodule "bundle/emmet-git"]
+	path = bundle/emmet-git
+	url = https://github.com/mattn/emmet-vim.git
