@@ -22,6 +22,9 @@ if &t_Co > 2 || has("gui_running")
     syntax on
 endif
 
+" Set leader
+let mapleader=","
+
 " Allow to leave an unsaved buffer
 set hidden
 
@@ -71,6 +74,20 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 " Incremental search
 set incsearch
+set hlsearch
+nnoremap <silent> <leader>l :nohlsearch<CR>
+nnoremap <leader>i :set incsearch!<CR>
+nnoremap <leader>h :set hlsearch!<CR>
+if has("autocmd")
+    autocmd InsertEnter * :setlocal nohlsearch
+    autocmd InsertLeave * :setlocal hlsearch
+endif
+
+" Spell checking
+if has("spell")
+    set spelllang=pl
+    nnoremap <silent> <leader>s :set spell!<CR>
+endif
 
 " Set colorscheme to desert
 if &t_Co == 256
@@ -79,8 +96,6 @@ elseif &t_Co > 2
     colorscheme desert
 endif
 
-" Set leader
-let mapleader=","
 
 " Edit Vimrc and Source Vimrc for quick changes
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -96,7 +111,7 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
 "ESC under tripple leader
-noremap <Leader><Leader><Leader> <Esc>
+inoremap jkj <Esc>
 
 "BuffExplorer settings
 let g:bufExplorerSplitBelow=1
@@ -110,3 +125,7 @@ nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 
 "tagbar settings
 nnoremap <silent> <F6> :TagbarToggle<CR>
+
+"vim-man
+map <leader>hh <Plug>(Man)
+map <leader>hv <Plug>(Vman)
