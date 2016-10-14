@@ -118,7 +118,7 @@ let g:bufExplorerSplitBelow=1
 let g:bufExplorerHorzSize=8
 
 "Gundo settings
-nnoremap <silent> <F5> :GundoToggle<CR>
+nnoremap <silent> <leader>g :GundoToggle<CR>
 
 "NERDTree settings
 nnoremap <silent> <C-t> :NERDTreeToggle<CR>
