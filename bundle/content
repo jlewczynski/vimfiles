@@ -1,9 +1,13 @@
 bufexplorer
     easy buffer exploration
+conque-gdb
+    interface for Conque GDB - debugger
 ctrlp
     fuzzy file search
 easymotion
     quick motion jumps
+emmet-git
+    plugin for quic HTML code generation (zen coding)
 eunuch
     useful Unix commands from inside Vim
 fugitive
@@ -14,9 +18,13 @@ nerdtree
     file browser
 pathogen
     plugin management
+ranibow-parentheses
+    coloring of matching parentheses
 tagbar
     file tag explorer
 tlib
     dependency for sth.
 unimpaired
     shortcuts for quick symmetrical actions
+vimwiki
+    plugin for creating local personal text wikis

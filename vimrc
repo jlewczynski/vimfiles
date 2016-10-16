@@ -126,6 +126,14 @@ nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 "tagbar settings
 nnoremap <silent> <F6> :TagbarToggle<CR>
 
-"vim-man
-map <leader>hh <Plug>(Man)
-map <leader>hv <Plug>(Vman)
+" Q for closing window
+nnoremap Q <C-w>q
+
+" rainbow parentheses for all files
+augroup rainbowParentheses
+    autocmd!
+    autocmd VimEnter * RainbowParenthesesActivate
+    autocmd Syntax * RainbowParenthesesLoadRound
+    autocmd Syntax * RainbowParenthesesLoadSquare
+    autocmd Syntax * RainbowParenthesesLoadBraces
+augroup END
