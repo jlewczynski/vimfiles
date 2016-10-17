@@ -118,17 +118,13 @@ let g:bufExplorerSplitBelow=1
 let g:bufExplorerHorzSize=8
 
 "Gundo settings
-nnoremap <silent> <F5> :GundoToggle<CR>
+nnoremap <silent> <leader>g :GundoToggle<CR>
 
 "NERDTree settings
 nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 
 "tagbar settings
 nnoremap <silent> <F6> :TagbarToggle<CR>
-
-"vim-man
-map <leader>hh <Plug>(Man)
-map <leader>hv <Plug>(Vman)
 
 "vimwiki
 let g:vimwiki_diary_months = {
@@ -137,3 +133,16 @@ let g:vimwiki_diary_months = {
     \ 7: 'lipiec', 8: 'sierpień', 9: 'wrzesień',
     \ 10: 'październik', 11: 'listopad', 12: 'grudzień'
     \ }
+
+" Q for closing window
+nnoremap Q <C-w>q
+
+" rainbow parentheses for all files
+augroup rainbowParentheses
+    autocmd!
+    autocmd VimEnter * RainbowParenthesesActivate
+    autocmd Syntax * RainbowParenthesesLoadRound
+    autocmd Syntax * RainbowParenthesesLoadSquare
+    autocmd Syntax * RainbowParenthesesLoadBraces
+augroup END
+
