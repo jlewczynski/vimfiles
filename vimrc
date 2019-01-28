@@ -152,4 +152,6 @@ let g:vimwiki_diary_months = {
     \ 7: 'Lipiec', 8: 'Sierpień', 9: 'Wrzesień',
     \ 10: 'Październik', 11: 'Listopad', 12: 'Grudzień'
     \ }
-let g:vimwiki_list = [{'path': '~/tactin_wiki', 'path_html': '~/tactin_wiki/html'}]
+let g:vimwiki_list = [
+    \ {'path': '~/vimwiki', 'path_html': '~/vimwiki/html'},
+    \ {'path': '~/tactin_wiki', 'path_html': '~/tactin_wiki/html'}]
