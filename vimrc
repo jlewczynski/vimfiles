@@ -96,6 +96,8 @@ elseif &t_Co > 2
     colorscheme desert
 endif
 
+let &colorcolumn='81,121'
+hi ColorColumn ctermbg=DarkGray
 
 " Edit Vimrc and Source Vimrc for quick changes
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -126,23 +128,28 @@ nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 "tagbar settings
 nnoremap <silent> <F6> :TagbarToggle<CR>
 
-"vimwiki
-let g:vimwiki_diary_months = {
-    \ 1: 'styczeń', 2: 'luty', 3: 'marzec',
-    \ 4: 'kwiecień', 5: 'maj', 6: 'czerwiec',
-    \ 7: 'lipiec', 8: 'sierpień', 9: 'wrzesień',
-    \ 10: 'październik', 11: 'listopad', 12: 'grudzień'
-    \ }
-
 " Q for closing window
 nnoremap Q <C-w>q
 
 " rainbow parentheses for all files
-augroup rainbowParentheses
-    autocmd!
-    autocmd VimEnter * RainbowParenthesesActivate
-    autocmd Syntax * RainbowParenthesesLoadRound
-    autocmd Syntax * RainbowParenthesesLoadSquare
-    autocmd Syntax * RainbowParenthesesLoadBraces
-augroup END
+" augroup rainbowParentheses
+"     autocmd!
+"     autocmd VimEnter * RainbowParenthesesActivate
+"     autocmd Syntax * RainbowParenthesesLoadRound
+"     autocmd Syntax * RainbowParenthesesLoadSquare
+"     autocmd Syntax * RainbowParenthesesLoadBraces
+" augroup END
 
+" xclip clipboard
+vmap <leader>xy :!xclip -f -sel clip<CR>
+map <leader>xp mz:-1r !xclip -o -sel clip<CR>`z
+
+" vimwiki
+let g:vimwiki_toc_header = 'Spis treści'
+let g:vimwiki_diary_months = {
+    \ 1: 'Styczeń', 2: 'Luty', 3: 'Marzec',
+    \ 4: 'Kwiecień', 5: 'Maj', 6: 'Czerwiec',
+    \ 7: 'Lipiec', 8: 'Sierpień', 9: 'Wrzesień',
+    \ 10: 'Październik', 11: 'Listopad', 12: 'Grudzień'
+    \ }
+let g:vimwiki_list = [{'path': '~/tactin_wiki', 'path_html': '~/tactin_wiki/html'}]
